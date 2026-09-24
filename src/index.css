@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #1e293b;
+  background: #eef3f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 8% 0%,
+      rgba(37, 99, 235, 0.12),
+      transparent 32rem
+    ),
+    linear-gradient(135deg, #f8fafc 0%, #e7eef7 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
