@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>React Search Filter Demo Updated</h1>
+      <h1>React Search Filter</h1>
       <br />
       <input
         type="search"
@@ -32,9 +32,18 @@ function App() {
           {usersData
             .filter((dataObj) => {
               // let dataLowerCase = data.
-              let searchTermLowerCase = searchTerm.toLowerCase();
-              let firstNameLowerCase = dataObj.first_name.toLowerCase();
-              return firstNameLowerCase.includes(searchTermLowerCase);
+              const searchTermLowerCase = searchTerm.toLowerCase();
+              const firstNameLowerCase = dataObj.first_name.toLowerCase();
+              const lastNameLowerCase = dataObj.last_name.toLowerCase();
+              const emailLowerCase = dataObj.email.toLowerCase();
+              const genderLowerCase = dataObj.gender.toLowerCase();
+              const isMatch =
+                firstNameLowerCase.includes(searchTermLowerCase) ||
+                lastNameLowerCase.includes(searchTermLowerCase) ||
+                emailLowerCase.includes(searchTermLowerCase) ||
+                genderLowerCase.includes(searchTermLowerCase);
+
+              return isMatch;
             })
             .map((user) => (
               <tr key={user.id}>
