@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>React Search Filter</h1>
+      <h1>React Search Filter Demo</h1>
       <br />
       <input
         type="search"
